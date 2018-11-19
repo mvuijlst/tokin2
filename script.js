@@ -9,9 +9,10 @@ function size(id, what) {
 function tankdetail(detail) {
   size("pump", "0 0 5em");
   document.getElementById("pump").addEventListener("click", function () {
-    display("tankdetail", "none");
-    display("pumplist", "block");
     size("pump", "0 0 25em");
+    display("pumplist", "block");
+    size("tank", "0 0 5em");
+    display("tanklist", "none");
   });
   size("tank", "0 0 25em");
   display("pumpdetail", "none");
