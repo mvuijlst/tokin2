@@ -1,38 +1,45 @@
-function display(id, what) {
-  document.getElementById(id).style.display = what;
+function hide(id) {
+  document.getElementById(id).style.display = "none";
 }
 
-function size(id, what) {
-  document.getElementById(id).style.flex = what;
+function show(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function big(id) {
+  document.getElementById(id).style.flex = "0 0 25em";
+}
+function small(id) {
+  document.getElementById(id).style.flex = "0 0 5em";
 }
 
 function tankdetail(detail) {
-  size("pump", "0 0 5em");
+  small("pump");
   document.getElementById("pump").addEventListener("click", function () {
-    size("pump", "0 0 25em");
-    display("pumplist", "block");
-    size("tank", "0 0 5em");
-    display("tanklist", "none");
+    big("pump");
+    show("pumplist");
+    small("tank");
+    hide("tanklist");
   });
-  size("tank", "0 0 25em");
-  display("pumpdetail", "none");
-  display("pumplist", "none");
-  display("tankdetail", "block");
-  document.getElementById("tankdetail").innerHTML = "<p>"+detail+" details</p>";
-  display("tanklist", "block");
+  big("tank");
+  hide("pumpdetail");
+  hide("pumplist");
+  show("tankdetail");
+  document.getElementById("tankdetail").innerHTML = "<p>" + detail + " details</p>";
+  show("tanklist");
 }
 
 function pumpdetail(detail) {
-  size("tank", "0 0 5em");
+  small("tank");
   document.getElementById("tank").addEventListener("click", function () {
-    display("pumpdetail", "none");
-    display("tanklist", "block");
-    size("tank", "0 0 25em");
+    hide("pumpdetail");
+    show("tanklist");
+    big("tank");
   });
-  size("pump", "0 0 25em");
-  display("tankdetail", "none");
-  display("tanklist", "none");
-  display("pumpdetail", "block");
+  big("pump");
+  hide("tankdetail");
+  hide("tanklist");
+  show("pumpdetail");
   document.getElementById("pumpdetail").innerHTML = "<p>" + detail + " details</p>";
-  display("pumplist", "block");
+  show("pumplist");
 }
