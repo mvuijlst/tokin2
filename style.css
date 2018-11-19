@@ -1,0 +1,38 @@
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    flex: 0 1 50px;
+    background-color: lightblue;
+}
+
+#footer {
+    flex: 0 1 50px;
+    background-color: lightgreen;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+}
+
+#left {
+    flex: 0 1 340px;
+    background-color: lightgray;
+}
+
+#mid {
+    flex: 0 1 180px;
+    background-color: lightyellow;
+}
+
+#content {
+    flex: 1;
+    background-color: white;
+    overflow-y: scroll;
+}
