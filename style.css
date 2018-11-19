@@ -36,3 +36,30 @@
     background-color: white;
     overflow-y: scroll;
 }
+
+
+/* layout C stuff */
+
+#tank {
+    flex: 0 0 25em;
+    background-color: #8386c9;
+    cursor: pointer;
+}
+
+#tankdetail {
+    flex: 1 1 auto;
+    background-color: #c9ccff;
+    display: none;
+}
+
+#pump {
+    flex: 0 0 25em;
+    background-color:#7dc099;
+    cursor: pointer;
+}
+
+#pumpdetail {
+    flex: 1 1 auto;
+    background-color: #a3fbc8;
+    display: none;
+}
